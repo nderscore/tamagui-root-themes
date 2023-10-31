@@ -13,6 +13,12 @@ if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
 }
 
+const tamaguiNextThemeProviderValueProp = {
+  light: 't_light',
+  dark: 't_dark',
+  dimmed: 't_dimmed',
+}
+
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
@@ -36,6 +42,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
       onChangeTheme={(next) => {
         setTheme(next as any)
       }}
+      value={tamaguiNextThemeProviderValueProp}
     >
       <Provider disableRootThemeClass defaultTheme={theme}>
         {children}

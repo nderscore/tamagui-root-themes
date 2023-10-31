@@ -1,7 +1,7 @@
 import { createTamagui } from 'tamagui'
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
-import { themes, tokens } from '@tamagui/themes'
+import { tokens } from '@tamagui/themes'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
 import { animations } from './animations'
@@ -60,7 +60,65 @@ export const config = createTamagui({
     body: bodyFont,
     heading: headingFont,
   },
-  themes,
+  themes: {
+    light: {
+      background: '#FFFFFF',
+      backgroundHover: '#FFFFFF',
+      backgroundPress: '#F5F5F5',
+      backgroundFocus: '#FFFFFF',
+      backgroundTransparent: '#FFFFFFFF',
+      borderColor: '#F5F5F5',
+      borderColorHover: '#F5F5F5',
+      borderColorPress: '#F5F5F5',
+      borderColorFocus: '#F5F5F5',
+      color: '#1C1C1C',
+      colorHover: '#1C1C1C',
+      colorPress: '#1C1C1C',
+      colorFocus: '#1C1C1C',
+      shadowColor: '#00000040',
+      shadowColorHover: '#00000040',
+      shadowColorPress: '#00000040',
+      shadowColorFocus: '#00000040',
+    },
+    dark: {
+      background: '#1C1C1C',
+      backgroundHover: '#1C1C1C',
+      backgroundPress: '#1C1C1C',
+      backgroundFocus: '#1C1C1C',
+      backgroundTransparent: '#FFFFFFFF',
+      borderColor: '#1C1C1C',
+      borderColorHover: '#1C1C1C',
+      borderColorPress: '#1C1C1C',
+      borderColorFocus: '#1C1C1C',
+      color: '#F5F5F5',
+      colorHover: '#F5F5F5',
+      colorPress: '#F5F5F5',
+      colorFocus: '#F5F5F5',
+      shadowColor: '#00000040',
+      shadowColorHover: '#00000040',
+      shadowColorPress: '#00000040',
+      shadowColorFocus: '#00000040',
+    },
+    dimmed: {
+      background: '#2F2F2F',
+      backgroundHover: '#2F2F2F',
+      backgroundPress: '#2F2F2F',
+      backgroundFocus: '#2F2F2F',
+      backgroundTransparent: '#FFFFFFFF',
+      borderColor: '#2F2F2F',
+      borderColorHover: '#2F2F2F',
+      borderColorPress: '#2F2F2F',
+      borderColorFocus: '#2F2F2F',
+      color: '#F5F5F5',
+      colorHover: '#F5F5F5',
+      colorPress: '#F5F5F5',
+      colorFocus: '#F5F5F5',
+      shadowColor: '#00000040',
+      shadowColorHover: '#00000040',
+      shadowColorPress: '#00000040',
+      shadowColorFocus: '#00000040',
+    },
+  } as const,
   tokens,
   media: createMedia({
     xs: { maxWidth: 660 },
